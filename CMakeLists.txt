@@ -16,6 +16,7 @@ ExternalProject_Add(
   reflexxes
   URL "https://github.com/jhu-lcsr/reflexxes_type2/blob/upstream-${reflexxes_type2_VERSION}/ReflexxesTypeII.zip?raw=true"
   DOWNLOAD_NAME ReflexxesTypeII.zip
+  PATCH_COMMAND patch -p0 --binary < ${CMAKE_CURRENT_SOURCE_DIR}/makefile_fix.patch
   CONFIGURE_COMMAND ""
   BINARY_DIR reflexxes-prefix/src/reflexxes/Linux
   BUILD_COMMAND make clean64 all64

@@ -1,0 +1,24 @@
+diff -Naur Linux/Makefile.global Linux/Makefile.global
+--- Linux/Makefile.global	2019-01-29 22:58:59.629814116 +0100
++++ Linux/Makefile.global	2012-01-31 10:12:40.000000000 +0100
+@@ -37,7 +37,7 @@
+ DEBUG_OBJ_DIR=debug/obj
+ DEBUG_LIB_DIR=debug/lib
+ DEBUG_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -ggdb
+-DEBUG_CL= g++ $(SYSTEM_LIBS) -gddb
++DEBUG_CL= g++ $(SYSTEM_LIBS) -ggdb
+ 
+ RELEASE_EXE_DIR=release/bin
+ RELEASE_OBJ_DIR=release/obj
+diff -Naur MacOS/Makefile.global MacOS/Makefile.global
+--- MacOS/Makefile.global	2019-01-29 22:59:40.465905483 +0100
++++ MacOS/Makefile.global	2012-04-04 10:29:40.000000000 +0200
+@@ -79,7 +79,7 @@
+ DEBUG_OBJ_DIR=debug/obj
+ DEBUG_LIB_DIR=debug/lib
+ DEBUG_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -ggdb
+-DEBUG_CL= g++ $(SYSTEM_LIBS) -gddb
++DEBUG_CL= g++ $(SYSTEM_LIBS) -ggdb
+ 
+ RELEASE_EXE_DIR=release/bin
+ RELEASE_OBJ_DIR=release/obj
